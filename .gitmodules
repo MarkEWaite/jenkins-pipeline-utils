@@ -1,0 +1,4 @@
+[submodule "large-files"]
+	path = modules/large-files
+	url = https://github.com/MarkEWaite/jenkins-pipeline-utils.git
+	branch = tests/largeFileSupport
