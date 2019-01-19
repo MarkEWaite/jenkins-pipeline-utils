@@ -1,9 +1,10 @@
 # tests/largeFileSupport branch for git client plugin tests
 
 The Jenkins git-client-plugin large file support tests need a
-repository which contains a branch named tests/largeFileSupport and
-which contains a large file named uuid.txt that contains the string
-5e7733d8acc94636850cb466aec524e4.  
+repository which contains a branch named tests/largeFileSupport.
+It contains multiple large files with string content as follows:
+* uuid.txt - 5e7733d8acc94636850cb466aec524e4
+* uuid2.txt - c49d89a61c3411e9a5555b2af3892239
 
 The GitHub billing rules require that if a forked repository uses large
 files, then the upstream repository must use large files, and the GitHub
