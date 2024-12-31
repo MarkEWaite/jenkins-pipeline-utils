@@ -1,8 +1,8 @@
 package com.markwaite;
 
-/* Run ant from tool "ant-latest" using tool "jdk8" */
+/* Run ant from tool "ant-latest" using tool 'jdk21' */
 void ant(def args) {
-  withAnt(installation: 'ant-latest', jdk: 'jdk8') {
+  withAnt(installation: 'ant-latest', jdk: 'jdk21') {
     if (isUnix()) {
       sh "ant ${args}"
     } else {
