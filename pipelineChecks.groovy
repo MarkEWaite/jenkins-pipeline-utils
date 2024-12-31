@@ -19,7 +19,7 @@ def dumpEnvVars() {
 def logContains(String regex, String failure_message) {
   if (!manager.logContains(regex)) {
     manager.addWarningBadge(failure_message)
-    manager.createSummary("warning.gif").appendText("<h1>" + failure_message + "</h1>", false, false, false, "red")
+    manager.createSummary("symbol-shield-warning").appendText(failure_message)
     manager.buildUnstable()
   }
 }
@@ -29,7 +29,7 @@ def logContains(String regex, String failure_message) {
 def logDoesNotContain(String regex, String failure_message) {
   if (manager.logContains(regex)) {
     manager.addWarningBadge(failure_message)
-    manager.createSummary("warning.gif").appendText("<h1>" + failure_message + "</h1>", false, false, false, "red")
+    manager.createSummary("symbol-shield-warning").appendText(failure_message)
     manager.buildUnstable()
   }
 }
