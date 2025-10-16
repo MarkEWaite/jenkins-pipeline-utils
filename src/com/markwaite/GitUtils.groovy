@@ -9,8 +9,7 @@ def adjustRemoteConfig(systemConfig, branch) {
   if (env.JENKINS_URL.contains("markwaite.net") && !systemConfig.url.contains("markwaite.net")) {
     def cacheConfig = [name: 'git-markwaite-net',
                        refspec: "+refs/heads/${branch}:refs/remotes/git-markwaite-net/${branch}",
-                       credentialsId: 'mwaite-mark-pc1-rsa-private-key',
-                       url: 'mwaite@git.markwaite.net:git/bare/bugs/jenkins-bugs.git']
+                       url: 'http://gitea-server.markwaite.net:3000/mwaite/jenkins-pipeline-utils.git']
     // Refer to cache config before system config to reduce wide area network use
     return [ cacheConfig, systemConfig ]
   }
